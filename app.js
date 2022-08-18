@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4848;
 const postRouter = require('./routes/postRouter');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(cors({origin: 'http://localhost:3000'}))
+app.use(cors({origin: true}))
 
 app.use('/api/post', postRouter);
 // we have to put it after router call for globle Error message
