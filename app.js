@@ -1,5 +1,6 @@
-require("express-async-errors");// for async error message without try catch block
 require('dotenv').config();
+require("express-async-errors");// for async error message without try catch block
+
 require('./db');
 const express = require('express');
 
