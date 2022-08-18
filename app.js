@@ -1,10 +1,12 @@
 require("express-async-errors");// for async error message without try catch block
+require('dotenv').config();
 require('./db');
 const express = require('express');
-require('dotenv').config();
+
 //const morgan = require("morgan");
-const app = express();
 const cors = require('cors');
+const app = express();
+
 // app.use(morgan('dev'));
 
 const PORT = process.env.PORT || 4848;
