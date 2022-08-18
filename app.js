@@ -7,7 +7,7 @@ const app = express();
 const cors = require('cors');
 // app.use(morgan('dev'));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4848;
 
 const postRouter = require('./routes/postRouter');
 app.use(express.json());
