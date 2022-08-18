@@ -12,20 +12,9 @@ const PORT = process.env.PORT || 4848;
 const postRouter = require('./routes/postRouter');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-const whitelist = ["http://localhost:3000"]
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error("Not allowed by CORS"))
-    }
-  },
-  credentials: true,
-}
-app.use(cors(corsOptions))
 
-//app.use(cors({origin: '*'}))
+
+app.use(cors({origin: true}))
 
 app.use('/api/post', postRouter);
 // we have to put it after router call for globle Error message
