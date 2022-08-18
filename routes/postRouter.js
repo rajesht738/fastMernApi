@@ -15,6 +15,7 @@ router.put('/:postId', multer.single("thumbnail"),
     postValidator,
     validate,
     updatePost);
+
 router.delete("/:postId", deletePost);  
 router.get("/single/:slug", getPost);
 router.get("/featured-posts", getFeaturedPosts);
