@@ -3,7 +3,7 @@ const FeaturedPost = require('../modals/featuredPost');
 const cloudinary = require('../cloud');
 const { isValidObjectId } = require('mongoose');
 const featuredPost = require('../modals/featuredPost');
-const { post } = require('../routes/postRouter');
+
 const FEATURED_POST_COUNT = 4;
 const addToFeaturedPost = async (postId) => {
 
